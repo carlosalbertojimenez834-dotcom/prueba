@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Styles Studio - Premium Barbershop</title>
+    <title>Buzz Hair Salon - Modern Hair & Colour Studio</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Google Font: Inter (Modern and Clean) -->
@@ -11,220 +11,212 @@
     <!-- Load Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        /* Custom Colors for a Premium Barbershop Theme (Black, Silver, Maroon) */
+        /* Custom Colors for a Modern Salon Theme (White, Gray, Electric Accent) */
         :root {
-            --dark-bg: #0F0F0F; /* Very Deep Charcoal */
-            --card-bg: #1E1E1E; /* Dark Gray for Cards */
-            --primary-accent: #701A1A; /* Deep Maroon/Burgundy for Classic Feel */
-            --secondary-accent: #A0A0A0; /* Silver/Chrome */
-            --light-text: #F0F0F0; /* Off-White for Readability */
+            --light-bg: #F5F5F5; /* Near White Background */
+            --dark-card: #181818; /* Deep Charcoal for Contrast */
+            --primary-accent: #E94C9E; /* Electric Magenta/Pink for Buzz */
+            --secondary-accent: #6B7280; /* Medium Gray */
+            --dark-text: #1F2937; /* Dark text on light background */
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
+            background-color: var(--light-bg);
+            color: var(--dark-text);
         }
-        /* Custom Button Style with Maroon Accent and Shadow */
-        .barber-button {
+        /* Custom Button Style with Electric Accent and Shadow */
+        .buzz-button {
             background-color: var(--primary-accent);
-            color: var(--light-text);
+            color: white;
             font-weight: 700;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 15px rgba(112, 26, 26, 0.4);
+            box-shadow: 0 4px 15px rgba(233, 76, 158, 0.4);
         }
-        .barber-button:hover {
-            background-color: #922020;
-            box-shadow: 0 8px 25px rgba(112, 26, 26, 0.6);
+        .buzz-button:hover {
+            background-color: #ff5eb4;
+            box-shadow: 0 8px 25px rgba(233, 76, 158, 0.6);
             transform: scale(1.03);
         }
 
-        /* Subtle Silver/Chrome Border for Cards */
-        .card-border-chrome {
-            border-bottom: 3px solid var(--secondary-accent);
-            background-color: var(--card-bg);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        /* Subtle Dark Border for Cards on light background */
+        .card-style {
+            background-color: white;
+            border-bottom: 3px solid var(--primary-accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        /* Custom Barbershop Icon (A simple line art razor blade) */
-        .icon-razor {
-            width: 40px;
-            height: 40px;
-            color: var(--secondary-accent);
+        .dark-section {
+            background-color: var(--dark-card);
+            color: var(--light-bg);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
-    <header class="bg-card-bg sticky top-0 z-20 border-b border-gray-800">
+    <!-- Header & Navigation (Dark for contrast) -->
+    <header class="bg-dark-card sticky top-0 z-20 border-b border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <a href="#home" class="text-3xl font-extrabold tracking-wider text-white">
-                SEBASTIAN <span style="color: var(--primary-accent);">STYLES</span>
+                BUZZ <span style="color: var(--primary-accent);">HAIR SALON</span>
             </a>
             <nav class="hidden md:flex space-x-10 text-sm font-medium items-center">
                 <a href="#services" class="text-gray-400 hover:text-primary-accent transition duration-150">Services</a>
-                <a href="#gallery" class="text-gray-400 hover:text-primary-accent transition duration-150">Portfolio</a>
+                <a href="#gallery" class="text-gray-400 hover:text-primary-accent transition duration-150">Styles</a>
                 <a href="#location" class="text-gray-400 hover:text-primary-accent transition duration-150">Location</a>
                 <!-- Call Button -->
-                <a href="tel:+15197316111" class="text-secondary-accent border border-secondary-accent px-3 py-2 rounded-lg hover:bg-gray-800 transition duration-150 flex items-center space-x-2">
+                <a href="tel:+15198279696" class="text-primary-accent border border-primary-accent px-3 py-2 rounded-lg hover:bg-gray-800 transition duration-150 flex items-center space-x-2">
                     <i class="ph ph-phone text-lg"></i>
-                    <span>Call Studio</span>
+                    <span>Call to Book</span>
                 </a>
-                <a href="mailto:book@sebastianstyles.com" class="barber-button px-5 py-2 rounded-lg text-sm">Book Appointment</a>
+                <a href="mailto:book@buzzhairsalon.com" class="buzz-button px-5 py-2 rounded-lg text-sm">Online Booking</a>
             </nav>
             <button class="md:hidden text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="ph ph-list text-3xl"></i>
             </button>
         </div>
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-gray-800 absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-card border-t border-gray-700 absolute w-full">
             <div class="px-5 pt-3 pb-4 space-y-2 flex flex-col items-center">
                 <a href="#services" class="block w-full text-center py-2 text-base font-medium text-gray-400 hover:text-primary-accent hover:bg-gray-800 rounded-md">Services</a>
-                <a href="#gallery" class="block w-full text-center py-2 text-base font-medium text-gray-400 hover:text-primary-accent hover:bg-gray-800 rounded-md">Portfolio</a>
+                <a href="#gallery" class="block w-full text-center py-2 text-base font-medium text-gray-400 hover:text-primary-accent hover:bg-gray-800 rounded-md">Styles</a>
                 <a href="#location" class="block w-full text-center py-2 text-base font-medium text-gray-400 hover:text-primary-accent hover:bg-gray-800 rounded-md">Location</a>
-                <a href="tel:+15197316111" class="block w-full text-center py-2 text-base font-medium text-secondary-accent border border-secondary-accent hover:bg-gray-800 rounded-md">Call: +1 519-731-6111</a>
-                <a href="mailto:book@sebastianstyles.com" class="barber-button w-full mt-3 py-3 rounded-lg text-base">Book Appointment</a>
+                <a href="tel:+15198279696" class="block w-full text-center py-2 text-base font-medium text-primary-accent border border-primary-accent hover:bg-gray-800 rounded-md">Call: +1 519-827-9696</a>
+                <a href="mailto:book@buzzhairsalon.com" class="buzz-button w-full mt-3 py-3 rounded-lg text-base">Online Booking</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section: High Impact -->
-    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--dark-bg);">
-        <!-- Background Image with Dark Overlay (Classic Barber Chair or Tools) -->
+    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--light-bg); color: var(--dark-text);">
+        <!-- Background Image with Light Overlay -->
         <div class="absolute inset-0">
             <!--  -->
-            <img src="https://placehold.co/1920x1080/0F0F0F/A0A0A0?text=Barbershop+Interior+Tools" 
-                 alt="Classic barbershop chair and tools" 
+            <img src="https://placehold.co/1920x1080/F5F5F5/E94C9E?text=Modern+Hair+Colour+Studio" 
+                 alt="Modern hair salon interior with stylish lighting" 
                  class="w-full h-full object-cover opacity-30">
-            <!-- Gradient Overlay for dramatic effect -->
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-90"></div>
+            <!-- Gradient Overlay for dramatic effect (from light-bg to transparent) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-light-bg to-transparent opacity-90"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <p class="text-secondary-accent text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full" style="border-color: var(--primary-accent);">Guelph's Premier Studio</p>
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-white">
-                The <span style="color: var(--primary-accent);">Art</span> of the Modern Gentleman.
+            <p class="text-dark-text text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full" style="border-color: var(--secondary-accent);">Where Style Happens</p>
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-dark-text">
+                Your Next Level <span style="color: var(--primary-accent);">Look.</span>
             </h1>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 font-light">
-                Precision cuts, traditional shaves, and a studio experience crafted for excellence.
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-12 font-light">
+                Experts in colour, cutting, and modern styling for all hair types.
             </p>
-            <a href="mailto:book@sebastianstyles.com" class="barber-button inline-block py-4 px-12 rounded-full text-lg">
+            <a href="mailto:book@buzzhairsalon.com" class="buzz-button inline-block py-4 px-12 rounded-full text-lg">
                 Book Your Transformation
             </a>
         </div>
     </section>
 
     <!-- Services Section: Elegant Cards -->
-    <section id="services" class="py-20 sm:py-32" style="background-color: var(--dark-bg);">
+    <section id="services" class="py-20 sm:py-32 dark-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Our Signature Services</h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Mastering the craft of modern and classic grooming.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Masterful Services</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">From subtle highlights to bold new colours, we do it all.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-10">
-                <!-- Service 1: Haircuts -->
-                <div class="p-8 rounded-xl shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:shadow-3xl card-border-chrome">
-                    <i class="ph ph-scissors-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Precision Haircuts</h3>
-                    <p class="text-gray-400">Detailed consultation, expert fade or taper, finished with a straight razor line-up and styling products.</p>
+                <!-- Service 1: Colour -->
+                <div class="p-8 rounded-xl shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:shadow-3xl bg-dark-card border-b-4" style="border-color: var(--primary-accent);">
+                    <i class="ph ph-paint-brush-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Colour Expert</h3>
+                    <p class="text-gray-400">Balayage, foil work, full colour, and corrective colour by certified specialists.</p>
                 </div>
-                <!-- Service 2: Shaves -->
-                <div class="p-8 rounded-xl shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:shadow-3xl card-border-chrome">
-                    <svg class="icon-razor mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2L12 22"/>
-                        <path d="M7 10H17"/>
-                        <path d="M5 22H19"/>
-                        <path d="M10 2L14 2"/>
-                        <path d="M10 18H14"/>
-                    </svg>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Traditional Hot Shave</h3>
-                    <p class="text-gray-400">A luxurious treatment with hot towels, essential oils, straight razor precision, and soothing aftershave balm.</p>
+                <!-- Service 2: Haircuts -->
+                <div class="p-8 rounded-xl shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:shadow-3xl bg-dark-card border-b-4" style="border-color: var(--primary-accent);">
+                    <i class="ph ph-hair-accent-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Signature Cuts</h3>
+                    <p class="text-gray-400">Customized cuts and styles for women, men, and children, tailored to your facial structure and lifestyle.</p>
                 </div>
-                <!-- Service 3: Beard Trim -->
-                <div class="p-8 rounded-xl shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:hover:shadow-3xl card-border-chrome">
-                    <i class="ph ph-beard-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Beard Sculpting</h3>
-                    <p class="text-gray-400">Expert shaping, trimming, and edging to define your look, complete with conditioning and specialized oils.</p>
+                <!-- Service 3: Styling -->
+                <div class="p-8 rounded-xl shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:hover:shadow-3xl bg-dark-card border-b-4" style="border-color: var(--primary-accent);">
+                    <i class="ph ph-sparkle-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Event Styling</h3>
+                    <p class="text-gray-400">Blowouts, updos, and formal styling for weddings, proms, and special occasions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio/Gallery Section -->
-    <section id="gallery" class="py-20 sm:py-32 bg-card-bg">
+    <!-- Portfolio/Gallery Section (Light Background) -->
+    <section id="gallery" class="py-20 sm:py-32" style="background-color: var(--light-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Our Latest Work</h2>
-            <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-12">Precision and style in every cut. See our portfolio.</p>
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">The Buzz Portfolio</h2>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-12">See the artistry in action. Your inspiration starts here.</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                <!-- Mock Images: Clean Haircuts -->
-                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-800 hover:border-primary-accent transition duration-300">
-                    <img src="https://placehold.co/400x400/222/701A1A?text=High+Fade+Cut" alt="High Fade Haircut" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
+                <!-- Mock Images: Hair Styles -->
+                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-300 hover:border-primary-accent transition duration-300">
+                    <img src="https://placehold.co/400x400/E94C9E/1F2937?text=Balayage+Highlights" alt="Balayage highlights" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
                 </div>
-                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-800 hover:border-primary-accent transition duration-300">
-                    <img src="https://placehold.co/400x400/222/701A1A?text=Classic+Taper" alt="Classic Taper Haircut" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
+                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-300 hover:border-primary-accent transition duration-300">
+                    <img src="https://placehold.co/400x400/E94C9E/1F2937?text=Vibrant+Pink+Colour" alt="Vibrant pink hair colour" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
                 </div>
-                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-800 hover:border-primary-accent transition duration-300">
-                    <img src="https://placehold.co/400x400/222/701A1A?text=Beard+Line+Up" alt="Crisp Beard Line Up" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
+                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-300 hover:border-primary-accent transition duration-300">
+                    <img src="https://placehold.co/400x400/E94C9E/1F2937?text=Short+Textured+Cut" alt="Short textured haircut" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
                 </div>
-                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-800 hover:border-primary-accent transition duration-300">
-                    <img src="https://placehold.co/400x400/222/701A1A?text=Textured+Crop" alt="Textured Crop Style" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
+                <div class="rounded-xl overflow-hidden aspect-square border-2 border-gray-300 hover:border-primary-accent transition duration-300">
+                    <img src="https://placehold.co/400x400/E94C9E/1F2937?text=Bridal+Updo" alt="Elegant bridal updo" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
                 </div>
             </div>
             
-            <a href="mailto:book@sebastianstyles.com" class="barber-button inline-block py-3 px-10 rounded-full text-lg">
-                View Gallery & Book
+            <a href="mailto:book@buzzhairsalon.com" class="buzz-button inline-block py-3 px-10 rounded-full text-lg">
+                Book Your Next Colour
             </a>
         </div>
     </section>
 
-    <!-- Contact and Location Section with Google Map -->
-    <section id="location" class="py-20 sm:py-32" style="background-color: var(--dark-bg);">
+    <!-- Contact and Location Section with Google Map (Light Background) -->
+    <section id="location" class="py-20 sm:py-32" style="background-color: var(--light-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Visit Our Studio</h2>
-                <p class="text-gray-400 text-lg max-w-3xl mx-auto">Experience grooming redefined at our Guelph location.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">Find Buzz Hair Salon</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Located centrally in Guelph, ready to welcome you.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Google Maps Embed: Updated for 199 Victoria Rd S Unit C1 -->
+                <!-- Google Maps Embed: Updated for 190 Waterloo Ave -->
                 <div class="rounded-xl overflow-hidden shadow-2xl h-[450px] md:h-[600px] w-full border-4" style="border-color: var(--primary-accent);">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b8f84713a0e69%3A0x803e6d8a3e7e8913!2s199%20Victoria%20Rd%20S%20Unit%20C1%2C%20Guelph%2C%20ON%20N1E%206T9%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b8f84713a0e69%3A0x4461a5e1c0c169d2!2s190%20Waterloo%20Ave%2C%20Guelph%2C%20ON%20N1H%203J3%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
                         class="w-full h-full border-0"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Location of Sebastian Styles Studio in Guelph">
+                        title="Location of Buzz Hair Salon in Guelph">
                     </iframe>
                 </div>
                 
-                <!-- Contact Info -->
-                <div class="space-y-8 p-8 rounded-xl shadow-2xl" style="background-color: var(--card-bg);">
+                <!-- Contact Info (White Card) -->
+                <div class="space-y-8 p-8 rounded-xl shadow-2xl card-style">
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-map-pin text-primary-accent text-3xl mt-1"></i>
+                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-white">Studio Address</p>
+                            <p class="font-bold text-lg text-dark-text">Salon Address</p>
                             <!-- Updated Address -->
-                            <p class="text-gray-400">199 Victoria Rd S Unit C1, Guelph, ON N1E 6T9, Canada</p>
+                            <p class="text-gray-600">190 Waterloo Ave, Guelph, ON N1H 3J3, Canada</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-phone-call text-primary-accent text-3xl mt-1"></i>
+                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-white">Call to Book</p>
+                            <p class="font-bold text-lg text-dark-text">Appointment Line</p>
                             <!-- Updated Phone Number -->
-                            <p class="text-gray-400"><a href="tel:+15197316111" class="hover:text-primary-accent transition">+1 519-731-6111</a></p>
+                            <p class="text-gray-600"><a href="tel:+15198279696" class="hover:text-primary-accent transition">+1 519-827-9696</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-calendar-check-duotone text-primary-accent text-3xl mt-1"></i>
+                        <i class="ph ph-calendar-plus-duotone text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-white">Online Booking</p>
-                            <p class="text-gray-400"><a href="mailto:book@sebastianstyles.com" class="hover:text-primary-accent transition">book@sebastianstyles.com</a></p>
+                            <p class="font-bold text-lg text-dark-text">Email Booking</p>
+                            <p class="text-gray-600"><a href="mailto:book@buzzhairsalon.com" class="hover:text-primary-accent transition">book@buzzhairsalon.com</a></p>
                         </div>
                     </div>
                     <!-- Dedicated Call Button for Mobile/Touch -->
-                    <a href="tel:+15197316111" class="barber-button inline-block w-full text-center py-3 rounded-lg text-md mt-6">
-                        <i class="ph ph-phone-call text-lg mr-2"></i> Call Studio (+1 519-731-6111)
+                    <a href="tel:+15198279696" class="buzz-button inline-block w-full text-center py-3 rounded-lg text-md mt-6">
+                        <i class="ph ph-phone-call text-lg mr-2"></i> Call Now (+1 519-827-9696)
                     </a>
                 </div>
 
@@ -232,19 +224,18 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-card-bg text-gray-400 py-8 border-t border-gray-800">
+    <!-- Footer (Dark for contrast) -->
+    <footer class="dark-section py-8 border-t border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl font-bold mb-2">Sebastian <span style="color: var(--primary-accent);">Styles</span> Studio</p>
-            <p class="text-sm">Precision Grooming for the Modern Gentleman in Guelph, ON.</p>
+            <p class="text-xl font-bold mb-2">Buzz <span style="color: var(--primary-accent);">Hair Salon</span></p>
+            <p class="text-sm text-gray-400">Guelph's Modern Hair & Colour Studio.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
             </div>
-            <p class="text-xs mt-6">&copy; 2024 Sebastian Styles Studio. All rights reserved.</p>
+            <p class="text-xs mt-6 text-gray-500">&copy; 2024 Buzz Hair Salon. All rights reserved.</p>
         </div>
     </footer>
 
 </body>
 </html>
-
