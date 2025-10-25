@@ -3,46 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pho Kinh Do Vietnamese Thai - Authentic Cuisine</title>
+    <title>Barbershop Classic Haircuts - Traditional Grooming</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Google Font: Inter (Modern and Clean) -->
+    <!-- Load Google Font: Inter (Used as a professional base font) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- Load Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        /* Custom Colors for a Fresh, Asian Cuisine Theme (Lime Green, Deep Red, White) */
+        /* Custom Colors for a Classic Barbershop Theme (Black, White, Deep Red) */
         :root {
-            --light-bg: #FFFFFF; /* Crisp White background */
-            --card-bg: #F8F8F8; /* Off-white for section contrast */
-            --primary-accent: #38A169; /* Vibrant Lime Green/Jade */
-            --secondary-accent: #C53030; /* Deep Red/Maroon */
-            --dark-text: #2D3748; /* Dark Charcoal Blue */
+            --dark-bg: #1A1A1A; /* Deep Charcoal Black */
+            --card-bg: #2C2C2C; /* Dark Gray for contrast */
+            --primary-accent: #B22222; /* Firebrick Red (Classic Barber Pole Red) */
+            --secondary-accent: #E0E0E0; /* Light Gray/Chrome */
+            --light-text: #F8F8F8; /* Near White */
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--card-bg);
-            color: var(--dark-text);
+            background-color: var(--dark-bg);
+            color: var(--light-text);
         }
-        /* Custom Button Style with Lime Green Accent */
-        .pho-button {
+        /* Custom Button Style with Deep Red Accent */
+        .barber-button {
             background-color: var(--primary-accent);
             color: white;
             font-weight: 700;
+            letter-spacing: 0.05em;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.4);
+            box-shadow: 0 4px 15px rgba(178, 34, 34, 0.4);
         }
-        .pho-button:hover {
-            background-color: #48BB78; /* Lighter shade on hover */
-            box-shadow: 0 8px 25px rgba(56, 161, 105, 0.6);
+        .barber-button:hover {
+            background-color: #C44E4E; /* Lighter shade on hover */
+            box-shadow: 0 8px 25px rgba(178, 34, 34, 0.6);
             transform: scale(1.03);
         }
 
-        /* Card style with Deep Red emphasis */
+        /* Card style with a metallic touch */
         .card-style {
-            background-color: var(--light-bg);
-            border-bottom: 5px solid var(--secondary-accent);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 5px solid var(--primary-accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         /* Smooth Scroll for Nav Links */
@@ -53,138 +55,102 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation (White and Clean) -->
-    <header class="bg-light-bg sticky top-0 z-20 border-b border-gray-200 shadow-sm">
+    <!-- Header & Navigation (Dark background) -->
+    <header class="bg-card-bg sticky top-0 z-20 border-b border-primary-accent shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-extrabold tracking-wider" style="color: var(--dark-text);">
-                PHO <span style="color: var(--primary-accent);">KINH DO</span>
+            <a href="#home" class="text-3xl font-extrabold tracking-widest text-white">
+                BARBERSHOP <span style="color: var(--primary-accent);">CLASSIC</span>
             </a>
             <nav class="hidden md:flex space-x-10 text-sm font-medium items-center">
-                <a href="#menu" class="text-secondary-accent hover:text-primary-accent transition duration-150">Menu</a>
-                <a href="#specialties" class="text-secondary-accent hover:text-primary-accent transition duration-150">Specials</a>
+                <a href="#services" class="text-secondary-accent hover:text-primary-accent transition duration-150">Services</a>
+                <a href="#reviews" class="text-secondary-accent hover:text-primary-accent transition duration-150">Reviews</a>
                 <a href="#location" class="text-secondary-accent hover:text-primary-accent transition duration-150">Find Us</a>
                 <!-- Call Button -->
-                <a href="tel:+15197801144" class="text-secondary-accent border border-secondary-accent px-3 py-2 rounded-full hover:bg-gray-100 transition duration-150 flex items-center space-x-2">
+                <a href="tel:+12269796445" class="text-primary-accent border border-primary-accent px-3 py-2 rounded-full hover:bg-card-bg transition duration-150 flex items-center space-x-2">
                     <i class="ph ph-phone text-lg"></i>
-                    <span>Call Us</span>
+                    <span>Call to Book</span>
                 </a>
-                <a href="mailto:order@phokinhdo.com" class="pho-button px-5 py-2 rounded-full text-sm">Order Pickup</a>
+                <a href="mailto:book@classicbarbershop.com" class="barber-button px-5 py-2 rounded-full text-sm">BOOK APPOINTMENT</a>
             </nav>
-            <button class="md:hidden text-dark-text focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden text-light-text focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="ph ph-list text-3xl"></i>
             </button>
         </div>
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-light-bg border-t border-gray-200 absolute w-full shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-gray-700 absolute w-full shadow-lg">
             <div class="px-5 pt-3 pb-4 space-y-2 flex flex-col items-center">
-                <a href="#menu" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-gray-50 rounded-md">Menu</a>
-                <a href="#specialties" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-gray-50 rounded-md">Specials</a>
-                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-gray-50 rounded-md">Find Us</a>
-                <a href="tel:+15197801144" class="block w-full text-center py-2 text-base font-medium text-secondary-accent border border-secondary-accent hover:bg-gray-50 rounded-md">Call: +1 519-780-1144</a>
-                <a href="mailto:order@phokinhdo.com" class="pho-button w-full mt-3 py-3 rounded-full text-base">Order Pickup</a>
+                <a href="#services" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-dark-bg rounded-md">Services</a>
+                <a href="#reviews" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-dark-bg rounded-md">Reviews</a>
+                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-dark-bg rounded-md">Find Us</a>
+                <a href="tel:+12269796445" class="block w-full text-center py-2 text-base font-medium text-primary-accent border border-primary-accent hover:bg-dark-bg rounded-md">Call: +1 226-979-6445</a>
+                <a href="mailto:book@classicbarbershop.com" class="barber-button w-full mt-3 py-3 rounded-full text-base">BOOK APPOINTMENT</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section: High Impact Pho Image -->
-    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--light-bg); color: var(--dark-text);">
-        <!-- Background Image of a steaming bowl of Pho -->
+    <!-- Hero Section: Dramatic and Focused -->
+    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--dark-bg);">
+        <!-- Background Image of a classic barber chair or tools -->
         <div class="absolute inset-0">
             <!--  -->
-            <img src="https://placehold.co/1920x1080/FFFFFF/38A169?text=Steaming+Bowl+of+Pho" 
-                 alt="Steaming Bowl of Pho with fresh herbs" 
-                 class="w-full h-full object-cover opacity-80">
-            <!-- Gradient Overlay for a subtle effect -->
-            <div class="absolute inset-0 bg-gradient-to-t from-card-bg to-transparent opacity-90"></div>
+            <img src="https://placehold.co/1920x1080/1A1A1A/B22222?text=Classic+Barbershop+Interior+with+Red+Accents" 
+                 alt="Classic Barbershop Interior" 
+                 class="w-full h-full object-cover opacity-50">
+            <!-- Gradient Overlay for drama -->
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-90"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <p style="color: var(--secondary-accent);" class="text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full border-secondary-accent">Taste of Vietnam & Thailand</p>
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-dark-text">
-                The Authentic <span style="color: var(--primary-accent);">Pho.</span>
+            <p style="color: var(--secondary-accent);" class="text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full border-secondary-accent">The Art of Grooming</p>
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-white">
+                Sharp Looks. <span style="color: var(--primary-accent);">Timeless Style.</span>
             </h1>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-12 font-light">
-                Serving Guelph traditional Vietnamese noodle soups and classic Thai dishes.
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12 font-light">
+                Expert haircuts, clean fades, and traditional hot towel shaves in the heart of Guelph.
             </p>
-            <a href="#menu" class="pho-button inline-block py-4 px-12 rounded-full text-lg">
-                Explore Our Menu
+            <a href="#services" class="barber-button inline-block py-4 px-12 rounded-full text-lg">
+                View Our Services
             </a>
         </div>
     </section>
 
-    <!-- Menu Highlights Section -->
-    <section id="specialties" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
+    <!-- Services Section -->
+    <section id="services" class="py-20 sm:py-32" style="background-color: var(--dark-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">Our Signature Flavors</h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Fresh ingredients, rich broths, and authentic spices make every dish memorable.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Our Grooming Menu</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Precision and tradition in every service we offer.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-10">
-                <!-- Highlight 1: Pho -->
-                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
-                    <i class="ph ph-bowl-food-duotone text-5xl mb-4 block" style="color: var(--secondary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-dark-text">The Perfect Pho</h3>
-                    <p class="text-gray-600">Slow-simmered, aromatic beef broth with fresh herbs, lime, and tender cuts of meat.</p>
+                <!-- Highlight 1: Haircut -->
+                <div class="p-8 rounded-xl shadow-xl transition duration-500 transform hover:-translate-y-2 card-style">
+                    <i class="ph ph-scissors-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">The Classic Cut</h3>
+                    <p class="text-gray-400">Perfectly sculpted haircuts, from fades to classic business cuts. Includes a neck shave.</p>
                 </div>
-                <!-- Highlight 2: Pad Thai -->
-                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
-                    <i class="ph ph-noodles-duotone text-5xl mb-4 block" style="color: var(--secondary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-dark-text">Classic Pad Thai</h3>
-                    <p class="text-gray-600">Authentic Thai rice noodles stir-fried with shrimp, tofu, peanuts, and tamarind sauce.</p>
+                <!-- Highlight 2: Shave -->
+                <div class="p-8 rounded-xl shadow-xl transition duration-500 transform hover:-translate-y-2 card-style">
+                    <i class="ph ph-razor-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Hot Towel Shave</h3>
+                    <p class="text-gray-400">A luxurious, traditional straight razor shave with multiple hot towels and essential oils.</p>
                 </div>
-                <!-- Highlight 3: Appetizers -->
-                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
-                    <i class="ph ph-flower-lotus-duotone text-5xl mb-4 block" style="color: var(--secondary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-dark-text">Fresh & Crispy Rolls</h3>
-                    <p class="text-gray-600">Hand-rolled spring rolls and fresh salad rolls, served with our signature peanut sauce.</p>
+                <!-- Highlight 3: Beard Trim -->
+                <div class="p-8 rounded-xl shadow-xl transition duration-500 transform hover:-translate-y-2 card-style">
+                    <i class="ph ph-mask-happy-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Beard & Moustache Trim</h3>
+                    <p class="text-gray-400">Expert shaping, lining, and conditioning for a truly refined look.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu Showcase Section (Simple Layout) -->
-    <section id="menu" class="py-20 sm:py-32" style="background-color: var(--light-bg);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">A Taste of Our Full Menu</h2>
-            <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-12">Vietnamese and Thai favorites, prepared daily with love and care.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <!-- Menu Item 1: Pho -->
-                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Pho Dac Biet (Special Combo)</h4>
-                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$18.95</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Beef broth with rare beef, flank, tendon, and meatballs.</p>
-                </div>
-                <!-- Menu Item 2: Thai Curry -->
-                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Green Curry with Chicken</h4>
-                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$17.50</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Spicy coconut milk curry with bamboo shoots and Thai basil, served with rice.</p>
-                </div>
-                <!-- Menu Item 3: Vermicelli -->
-                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Bun Thit Nuong (Grilled Pork Vermicelli)</h4>
-                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$16.95</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Cold vermicelli noodles with grilled pork, fresh vegetables, and fish sauce.</p>
-                </div>
-                <!-- Menu Item 4: Appetizer -->
-                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Mango Salad</h4>
-                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$13.00</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Tangy Thai salad with fresh mango, cashews, red onion, and house dressing.</p>
-                </div>
-            </div>
-            
-            <a href="mailto:order@phokinhdo.com" class="pho-button inline-block py-3 px-10 rounded-full text-lg mt-12">
-                Start Your Order
+    <!-- CTA Section (Red background for urgency) -->
+    <section class="py-16" style="background-color: var(--primary-accent);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl font-extrabold mb-4 text-white">Ready for a Fresh Look?</h3>
+            <p class="text-gray-200 text-lg mb-8">Appointments are highly recommended, especially on weekends.</p>
+            <a href="mailto:book@classicbarbershop.com" class="bg-white text-primary-accent hover:bg-gray-200 font-bold inline-block py-3 px-10 rounded-full text-lg shadow-xl transition">
+                Book Your Time Slot
             </a>
         </div>
     </section>
@@ -193,51 +159,52 @@
     <section id="location" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">Visit Us or Order Takeout</h2>
-                <p class="text-gray-600 text-lg max-w-3xl mx-auto">We look forward to serving you the best of Southeast Asia.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Find Our Studio</h2>
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto">Located conveniently on Woolwich St, come see us soon.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Google Maps Embed: Updated for 650 Woodlawn Rd W -->
+                <!-- Google Maps Embed: Updated for 141 Woolwich St #103 -->
                 <div class="rounded-xl overflow-hidden shadow-2xl h-[450px] md:h-[600px] w-full border-4" style="border-color: var(--primary-accent);">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b9b6e7000d6a5%3A0xc6c760e408e01103!2s650%20Woodlawn%20Rd%20W%2C%20Guelph%2C%20ON%20N1K%201B8%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b9ad7819c99d7%3A0x6b2e1f2b6e1f0e42!2s141%20Woolwich%20St%20%23103%2C%20Guelph%2C%20ON%20N1H%201J7%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
                         class="w-full h-full border-0"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Location of Pho Kinh Do Vietnamese Thai in Guelph">
+                        title="Location of Barbershop Classic Haircuts in Guelph">
                     </iframe>
                 </div>
                 
-                <!-- Contact Info -->
-                <div class="space-y-8 p-8 rounded-xl shadow-2xl card-style" style="border-bottom: 5px solid var(--primary-accent);">
+                <!-- Contact Info (Red Border Card) -->
+                <div class="space-y-8 p-8 rounded-xl shadow-2xl card-style">
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--secondary-accent);"></i>
+                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-dark-text">Our Location</p>
+                            <p class="font-bold text-lg text-white">Our Address</p>
                             <!-- Updated Address -->
-                            <p class="text-gray-600">650 Woodlawn Rd W, Guelph, ON N1K 1B8, Canada</p>
+                            <p class="text-gray-400">141 Woolwich St #103, Guelph, ON N1H 1J7, Canada</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--secondary-accent);"></i>
+                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-dark-text">Call Us</p>
+                            <p class="font-bold text-lg text-white">Book By Phone</p>
                             <!-- Updated Phone Number -->
-                            <p class="text-gray-600"><a href="tel:+15197801144" class="hover:text-primary-accent transition">+1 519-780-1144</a></p>
+                            <p class="text-gray-400"><a href="tel:+12269796445" class="hover:text-primary-accent transition">+1 226-979-6445</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-clock-duotone text-3xl mt-1" style="color: var(--secondary-accent);"></i>
+                        <i class="ph ph-clock-duotone text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-dark-text">Hours</p>
-                            <p class="text-gray-600">Mon - Sun: 11:30 AM - 9:00 PM</p>
+                            <p class="font-bold text-lg text-white">Hours</p>
+                            <p class="text-gray-400">Tue - Fri: 10:00 AM - 7:00 PM</p>
+                            <p class="text-gray-400">Sat: 9:00 AM - 4:00 PM (Closed Sun/Mon)</p>
                         </div>
                     </div>
                     <!-- Dedicated Call Button for Mobile/Touch -->
-                    <a href="tel:+15197801144" class="pho-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
-                        <i class="ph ph-phone-call text-lg mr-2"></i> Call to Order (+1 519-780-1144)
+                    <a href="tel:+12269796445" class="barber-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
+                        <i class="ph ph-phone-call text-lg mr-2"></i> Call to Book (+1 226-979-6445)
                     </a>
                 </div>
 
@@ -245,16 +212,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark-text text-gray-400 py-8">
+    <!-- Footer (Dark background) -->
+    <footer class="bg-dark-bg text-gray-500 py-8 border-t border-primary-accent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl font-bold mb-2">Pho <span style="color: var(--primary-accent);">Kinh Do</span></p>
-            <p class="text-sm">Authentic Vietnamese & Thai Cuisine in Guelph, ON.</p>
+            <p class="text-xl font-bold mb-2">Barbershop <span style="color: var(--primary-accent);">Classic</span></p>
+            <p class="text-sm">Traditional haircuts and shaves in Guelph, ON.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
             </div>
-            <p class="text-xs mt-6 text-gray-500">&copy; 2024 Pho Kinh Do Vietnamese Thai. All rights reserved.</p>
+            <p class="text-xs mt-6 text-gray-600">&copy; 2024 Barbershop Classic Haircuts. All rights reserved.</p>
         </div>
     </footer>
 
