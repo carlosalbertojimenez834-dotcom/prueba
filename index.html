@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbershop Classic Haircuts - Traditional Grooming</title>
+    <title>Shawarma G - Guelph's Best Shawarma</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Google Font: Inter (Used as a professional base font) -->
+    <!-- Load Google Font: Inter (Modern and Clean) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- Load Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        /* Custom Colors for a Classic Barbershop Theme (Black, White, Deep Red) */
+        /* Custom Colors for a Vibrant Shawarma Theme (Red, Yellow/Gold, Black) */
         :root {
             --dark-bg: #1A1A1A; /* Deep Charcoal Black */
             --card-bg: #2C2C2C; /* Dark Gray for contrast */
-            --primary-accent: #B22222; /* Firebrick Red (Classic Barber Pole Red) */
-            --secondary-accent: #E0E0E0; /* Light Gray/Chrome */
+            --primary-accent: #FFC300; /* Vibrant Yellow/Gold (for flavor) */
+            --secondary-accent: #CC0000; /* Intense Red (for energy) */
             --light-text: #F8F8F8; /* Near White */
         }
         body {
@@ -24,26 +24,25 @@
             background-color: var(--dark-bg);
             color: var(--light-text);
         }
-        /* Custom Button Style with Deep Red Accent */
-        .barber-button {
+        /* Custom Button Style with Yellow/Gold Accent and Red Shadow */
+        .shawarma-button {
             background-color: var(--primary-accent);
-            color: white;
+            color: var(--dark-bg);
             font-weight: 700;
             letter-spacing: 0.05em;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 15px rgba(178, 34, 34, 0.4);
+            box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4); /* Shadow in Red */
         }
-        .barber-button:hover {
-            background-color: #C44E4E; /* Lighter shade on hover */
-            box-shadow: 0 8px 25px rgba(178, 34, 34, 0.6);
+        .shawarma-button:hover {
+            background-color: #FFD700; /* Slightly brighter yellow on hover */
+            box-shadow: 0 8px 25px rgba(204, 0, 0, 0.6);
             transform: scale(1.03);
         }
 
-        /* Card style with a metallic touch */
+        /* Card style with red emphasis */
         .card-style {
             background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 5px solid var(--primary-accent);
+            border-bottom: 5px solid var(--secondary-accent);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
@@ -56,21 +55,21 @@
 <body class="antialiased">
 
     <!-- Header & Navigation (Dark background) -->
-    <header class="bg-card-bg sticky top-0 z-20 border-b border-primary-accent shadow-lg">
+    <header class="bg-card-bg sticky top-0 z-20 border-b border-secondary-accent shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <a href="#home" class="text-3xl font-extrabold tracking-widest text-white">
-                BARBERSHOP <span style="color: var(--primary-accent);">CLASSIC</span>
+                SHAWARMA <span style="color: var(--primary-accent);">G</span>
             </a>
             <nav class="hidden md:flex space-x-10 text-sm font-medium items-center">
-                <a href="#services" class="text-secondary-accent hover:text-primary-accent transition duration-150">Services</a>
-                <a href="#reviews" class="text-secondary-accent hover:text-primary-accent transition duration-150">Reviews</a>
-                <a href="#location" class="text-secondary-accent hover:text-primary-accent transition duration-150">Find Us</a>
+                <a href="#menu" class="text-gray-300 hover:text-primary-accent transition duration-150">Menu</a>
+                <a href="#specials" class="text-gray-300 hover:text-primary-accent transition duration-150">Specials</a>
+                <a href="#location" class="text-gray-300 hover:text-primary-accent transition duration-150">Find Us</a>
                 <!-- Call Button -->
-                <a href="tel:+12269796445" class="text-primary-accent border border-primary-accent px-3 py-2 rounded-full hover:bg-card-bg transition duration-150 flex items-center space-x-2">
+                <a href="tel:+15192659579" class="text-secondary-accent border border-secondary-accent px-3 py-2 rounded-full hover:bg-card-bg transition duration-150 flex items-center space-x-2">
                     <i class="ph ph-phone text-lg"></i>
-                    <span>Call to Book</span>
+                    <span>Call to Order</span>
                 </a>
-                <a href="mailto:book@classicbarbershop.com" class="barber-button px-5 py-2 rounded-full text-sm">BOOK APPOINTMENT</a>
+                <a href="mailto:order@shawarmag.com" class="shawarma-button px-5 py-2 rounded-full text-sm">ORDER ONLINE</a>
             </nav>
             <button class="md:hidden text-light-text focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="ph ph-list text-3xl"></i>
@@ -79,132 +78,132 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-gray-700 absolute w-full shadow-lg">
             <div class="px-5 pt-3 pb-4 space-y-2 flex flex-col items-center">
-                <a href="#services" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-dark-bg rounded-md">Services</a>
-                <a href="#reviews" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-dark-bg rounded-md">Reviews</a>
-                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-dark-bg rounded-md">Find Us</a>
-                <a href="tel:+12269796445" class="block w-full text-center py-2 text-base font-medium text-primary-accent border border-primary-accent hover:bg-dark-bg rounded-md">Call: +1 226-979-6445</a>
-                <a href="mailto:book@classicbarbershop.com" class="barber-button w-full mt-3 py-3 rounded-full text-base">BOOK APPOINTMENT</a>
+                <a href="#menu" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Menu</a>
+                <a href="#specials" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Specials</a>
+                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Find Us</a>
+                <a href="tel:+15192659579" class="block w-full text-center py-2 text-base font-medium text-secondary-accent border border-secondary-accent hover:bg-dark-bg rounded-md">Call: +1 519-265-9579</a>
+                <a href="mailto:order@shawarmag.com" class="shawarma-button w-full mt-3 py-3 rounded-full text-base">ORDER ONLINE</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section: Dramatic and Focused -->
+    <!-- Hero Section: Focused on the Shawarma Tower -->
     <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--dark-bg);">
-        <!-- Background Image of a classic barber chair or tools -->
+        <!-- Background Image of a large shawarma meat cone -->
         <div class="absolute inset-0">
             <!--  -->
-            <img src="https://placehold.co/1920x1080/1A1A1A/B22222?text=Classic+Barbershop+Interior+with+Red+Accents" 
-                 alt="Classic Barbershop Interior" 
+            <img src="https://placehold.co/1920x1080/1A1A1A/CC0000?text=Delicious+Shawarma+Meat+Tower" 
+                 alt="Delicious Shawarma Meat Tower" 
                  class="w-full h-full object-cover opacity-50">
             <!-- Gradient Overlay for drama -->
             <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-90"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <p style="color: var(--secondary-accent);" class="text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full border-secondary-accent">The Art of Grooming</p>
+            <p style="color: var(--primary-accent);" class="text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full border-primary-accent">Fresh. Fast. Flavorful.</p>
             <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-white">
-                Sharp Looks. <span style="color: var(--primary-accent);">Timeless Style.</span>
+                The G in <span style="color: var(--secondary-accent);">Shawarma.</span>
             </h1>
             <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12 font-light">
-                Expert haircuts, clean fades, and traditional hot towel shaves in the heart of Guelph.
+                Guelph's favorite spot for authentic, loaded shawarmas, plates, and wraps.
             </p>
-            <a href="#services" class="barber-button inline-block py-4 px-12 rounded-full text-lg">
-                View Our Services
+            <a href="#menu" class="shawarma-button inline-block py-4 px-12 rounded-full text-lg">
+                View Menu & Prices
             </a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 sm:py-32" style="background-color: var(--dark-bg);">
+    <!-- Menu Highlights Section -->
+    <section id="menu" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Our Grooming Menu</h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Precision and tradition in every service we offer.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Our Featured Flavors</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Made fresh daily with the best quality ingredients and unique G-Sauce.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-10">
-                <!-- Highlight 1: Haircut -->
+                <!-- Highlight 1: Chicken Shawarma -->
                 <div class="p-8 rounded-xl shadow-xl transition duration-500 transform hover:-translate-y-2 card-style">
-                    <i class="ph ph-scissors-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-white">The Classic Cut</h3>
-                    <p class="text-gray-400">Perfectly sculpted haircuts, from fades to classic business cuts. Includes a neck shave.</p>
+                    <i class="ph ph-chicken-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Chicken Shawarma</h3>
+                    <p class="text-gray-400">Marinated chicken, slow-cooked on the spit, served with garlic sauce and fresh toppings.</p>
                 </div>
-                <!-- Highlight 2: Shave -->
+                <!-- Highlight 2: Shawarma Plates -->
                 <div class="p-8 rounded-xl shadow-xl transition duration-500 transform hover:-translate-y-2 card-style">
-                    <i class="ph ph-razor-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Hot Towel Shave</h3>
-                    <p class="text-gray-400">A luxurious, traditional straight razor shave with multiple hot towels and essential oils.</p>
+                    <i class="ph ph-bowl-food-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">The Platter Experience</h3>
+                    <p class="text-gray-400">Meat, rice, potatoes, salad, and a side of hummus and pita bread. A full meal!</p>
                 </div>
-                <!-- Highlight 3: Beard Trim -->
+                <!-- Highlight 3: Falafel -->
                 <div class="p-8 rounded-xl shadow-xl transition duration-500 transform hover:-translate-y-2 card-style">
-                    <i class="ph ph-mask-happy-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Beard & Moustache Trim</h3>
-                    <p class="text-gray-400">Expert shaping, lining, and conditioning for a truly refined look.</p>
+                    <i class="ph ph-leaf-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Veggie Falafel</h3>
+                    <p class="text-gray-400">Crispy, house-made falafel (chickpea fritters) in a wrap or plate, served with tahini.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section (Red background for urgency) -->
-    <section class="py-16" style="background-color: var(--primary-accent);">
+    <section id="specials" class="py-16" style="background-color: var(--secondary-accent);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-3xl font-extrabold mb-4 text-white">Ready for a Fresh Look?</h3>
-            <p class="text-gray-200 text-lg mb-8">Appointments are highly recommended, especially on weekends.</p>
-            <a href="mailto:book@classicbarbershop.com" class="bg-white text-primary-accent hover:bg-gray-200 font-bold inline-block py-3 px-10 rounded-full text-lg shadow-xl transition">
-                Book Your Time Slot
+            <h3 class="text-3xl font-extrabold mb-4 text-white">Daily Lunch Specials</h3>
+            <p class="text-gray-200 text-lg mb-8">Ask about our daily combo deals! Great value, huge flavor.</p>
+            <a href="tel:+15192659579" class="shawarma-button bg-white text-dark-bg hover:bg-gray-200 font-bold inline-block py-3 px-10 rounded-full text-lg shadow-xl transition">
+                <i class="ph ph-fire text-lg mr-2"></i> Call to Hear Specials
             </a>
         </div>
     </section>
 
     <!-- Contact and Location Section with Google Map -->
-    <section id="location" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
+    <section id="location" class="py-20 sm:py-32" style="background-color: var(--dark-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Find Our Studio</h2>
-                <p class="text-gray-400 text-lg max-w-3xl mx-auto">Located conveniently on Woolwich St, come see us soon.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Find & Contact Shawarma G</h2>
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto">Visit us for your next craving or call ahead for quick pickup.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Google Maps Embed: Updated for 141 Woolwich St #103 -->
+                <!-- Google Maps Embed: Updated for 328 Speedvale Ave E -->
                 <div class="rounded-xl overflow-hidden shadow-2xl h-[450px] md:h-[600px] w-full border-4" style="border-color: var(--primary-accent);">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b9ad7819c99d7%3A0x6b2e1f2b6e1f0e42!2s141%20Woolwich%20St%20%23103%2C%20Guelph%2C%20ON%20N1H%201J7%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b9ad7819c99d7%3A0x6b2e1f2b6e1f0e42!2s328%20Speedvale%20Ave%20E%2C%20Guelph%2C%20ON%20N1E%201N5%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
                         class="w-full h-full border-0"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Location of Barbershop Classic Haircuts in Guelph">
+                        title="Location of Shawarma G in Guelph">
                     </iframe>
                 </div>
                 
-                <!-- Contact Info (Red Border Card) -->
+                <!-- Contact Info (Yellow/Gold Border Card) -->
                 <div class="space-y-8 p-8 rounded-xl shadow-2xl card-style">
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--primary-accent);"></i>
+                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--secondary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-white">Our Address</p>
+                            <p class="font-bold text-lg text-white">Our Location</p>
                             <!-- Updated Address -->
-                            <p class="text-gray-400">141 Woolwich St #103, Guelph, ON N1H 1J7, Canada</p>
+                            <p class="text-gray-400">328 Speedvale Ave E, Guelph, ON N1E 1N5, Canada</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--primary-accent);"></i>
+                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--secondary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-white">Book By Phone</p>
+                            <p class="font-bold text-lg text-white">Quick Orders</p>
                             <!-- Updated Phone Number -->
-                            <p class="text-gray-400"><a href="tel:+12269796445" class="hover:text-primary-accent transition">+1 226-979-6445</a></p>
+                            <p class="text-gray-400"><a href="tel:+15192659579" class="hover:text-primary-accent transition">+1 519-265-9579</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-clock-duotone text-3xl mt-1" style="color: var(--primary-accent);"></i>
+                        <i class="ph ph-clock-duotone text-3xl mt-1" style="color: var(--secondary-accent);"></i>
                         <div>
                             <p class="font-bold text-lg text-white">Hours</p>
-                            <p class="text-gray-400">Tue - Fri: 10:00 AM - 7:00 PM</p>
-                            <p class="text-gray-400">Sat: 9:00 AM - 4:00 PM (Closed Sun/Mon)</p>
+                            <p class="text-gray-400">Mon - Sat: 11:00 AM - 9:00 PM</p>
+                            <p class="text-gray-400">Sunday: 12:00 PM - 8:00 PM</p>
                         </div>
                     </div>
                     <!-- Dedicated Call Button for Mobile/Touch -->
-                    <a href="tel:+12269796445" class="barber-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
-                        <i class="ph ph-phone-call text-lg mr-2"></i> Call to Book (+1 226-979-6445)
+                    <a href="tel:+15192659579" class="shawarma-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
+                        <i class="ph ph-phone-call text-lg mr-2"></i> Call to Order (+1 519-265-9579)
                     </a>
                 </div>
 
@@ -213,15 +212,15 @@
     </section>
 
     <!-- Footer (Dark background) -->
-    <footer class="bg-dark-bg text-gray-500 py-8 border-t border-primary-accent">
+    <footer class="bg-card-bg text-gray-500 py-8 border-t border-primary-accent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl font-bold mb-2">Barbershop <span style="color: var(--primary-accent);">Classic</span></p>
-            <p class="text-sm">Traditional haircuts and shaves in Guelph, ON.</p>
+            <p class="text-xl font-bold mb-2">Shawarma <span style="color: var(--primary-accent);">G</span></p>
+            <p class="text-sm">Guelph's home for authentic shawarma.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
             </div>
-            <p class="text-xs mt-6 text-gray-600">&copy; 2024 Barbershop Classic Haircuts. All rights reserved.</p>
+            <p class="text-xs mt-6 text-gray-600">&copy; 2024 Shawarma G. All rights reserved.</p>
         </div>
     </footer>
 
