@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Bar and Restaurant - Cozy Dining in Guelph</title>
+    <title>Pho Kinh Do Vietnamese Thai - Authentic Cuisine</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Google Font: Inter (Modern and Clean) -->
@@ -11,46 +11,38 @@
     <!-- Load Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        /* Custom Colors for a Warm, Family-Friendly Theme (Forest Green, Cream, Terracotta) */
+        /* Custom Colors for a Fresh, Asian Cuisine Theme (Lime Green, Deep Red, White) */
         :root {
-            --dark-bg: #2E403D; /* Deep Forest Green */
-            --card-bg: #F5F5DC; /* Creamy Beige */
-            --primary-accent: #E76F51; /* Soft Terracotta/Orange */
-            --secondary-accent: #1D2625; /* Very Dark Green/Charcoal */
-            --light-text: #F0F0F0; /* Creamy White */
-            --dark-text: #1D2625; /* Dark text on light elements */
+            --light-bg: #FFFFFF; /* Crisp White background */
+            --card-bg: #F8F8F8; /* Off-white for section contrast */
+            --primary-accent: #38A169; /* Vibrant Lime Green/Jade */
+            --secondary-accent: #C53030; /* Deep Red/Maroon */
+            --dark-text: #2D3748; /* Dark Charcoal Blue */
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
+            background-color: var(--card-bg);
+            color: var(--dark-text);
         }
-        /* Custom Button Style with Warm Accent and Shadow */
-        .family-button {
+        /* Custom Button Style with Lime Green Accent */
+        .pho-button {
             background-color: var(--primary-accent);
             color: white;
             font-weight: 700;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 15px rgba(231, 111, 81, 0.4);
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.4);
         }
-        .family-button:hover {
-            background-color: #FA856B; /* Lighter shade on hover */
-            box-shadow: 0 8px 25px rgba(231, 111, 81, 0.6);
+        .pho-button:hover {
+            background-color: #48BB78; /* Lighter shade on hover */
+            box-shadow: 0 8px 25px rgba(56, 161, 105, 0.6);
             transform: scale(1.03);
         }
 
-        /* Card style on light background, with a warm border */
-        .card-light {
-            background-color: var(--card-bg);
-            color: var(--dark-text);
-            border-bottom: 5px solid var(--primary-accent);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Dark section style (used in header and footer) */
-        .dark-section {
-            background-color: var(--secondary-accent);
-            color: var(--light-text);
+        /* Card style with Deep Red emphasis */
+        .card-style {
+            background-color: var(--light-bg);
+            border-bottom: 5px solid var(--secondary-accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
         /* Smooth Scroll for Nav Links */
@@ -61,156 +53,191 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation (Dark for cozy atmosphere) -->
-    <header class="dark-section sticky top-0 z-20 border-b border-primary-accent">
+    <!-- Header & Navigation (White and Clean) -->
+    <header class="bg-light-bg sticky top-0 z-20 border-b border-gray-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-extrabold tracking-wider text-white">
-                FAMILY <span style="color: var(--primary-accent);">BAR & GRILL</span>
+            <a href="#home" class="text-3xl font-extrabold tracking-wider" style="color: var(--dark-text);">
+                PHO <span style="color: var(--primary-accent);">KINH DO</span>
             </a>
             <nav class="hidden md:flex space-x-10 text-sm font-medium items-center">
-                <a href="#menu" class="text-gray-300 hover:text-primary-accent transition duration-150">Menu</a>
-                <a href="#gallery" class="text-gray-300 hover:text-primary-accent transition duration-150">Gallery</a>
-                <a href="#location" class="text-gray-300 hover:text-primary-accent transition duration-150">Location</a>
+                <a href="#menu" class="text-secondary-accent hover:text-primary-accent transition duration-150">Menu</a>
+                <a href="#specialties" class="text-secondary-accent hover:text-primary-accent transition duration-150">Specials</a>
+                <a href="#location" class="text-secondary-accent hover:text-primary-accent transition duration-150">Find Us</a>
                 <!-- Call Button -->
-                <a href="tel:+12269796072" class="text-primary-accent border border-primary-accent px-3 py-2 rounded-full hover:bg-dark-bg transition duration-150 flex items-center space-x-2">
+                <a href="tel:+15197801144" class="text-secondary-accent border border-secondary-accent px-3 py-2 rounded-full hover:bg-gray-100 transition duration-150 flex items-center space-x-2">
                     <i class="ph ph-phone text-lg"></i>
-                    <span>Call to Reserve</span>
+                    <span>Call Us</span>
                 </a>
-                <a href="mailto:reservations@familybarandrestaurant.com" class="family-button px-5 py-2 rounded-full text-sm">Book a Table</a>
+                <a href="mailto:order@phokinhdo.com" class="pho-button px-5 py-2 rounded-full text-sm">Order Pickup</a>
             </nav>
-            <button class="md:hidden text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden text-dark-text focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="ph ph-list text-3xl"></i>
             </button>
         </div>
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden dark-section border-t border-gray-700 absolute w-full shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden bg-light-bg border-t border-gray-200 absolute w-full shadow-lg">
             <div class="px-5 pt-3 pb-4 space-y-2 flex flex-col items-center">
-                <a href="#menu" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Menu</a>
-                <a href="#gallery" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Gallery</a>
-                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Location</a>
-                <a href="tel:+12269796072" class="block w-full text-center py-2 text-base font-medium text-primary-accent border border-primary-accent hover:bg-dark-bg rounded-md">Call: +1 226-979-6072</a>
-                <a href="mailto:reservations@familybarandrestaurant.com" class="family-button w-full mt-3 py-3 rounded-full text-base">Book a Table</a>
+                <a href="#menu" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-gray-50 rounded-md">Menu</a>
+                <a href="#specialties" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-gray-50 rounded-md">Specials</a>
+                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:text-primary-accent hover:bg-gray-50 rounded-md">Find Us</a>
+                <a href="tel:+15197801144" class="block w-full text-center py-2 text-base font-medium text-secondary-accent border border-secondary-accent hover:bg-gray-50 rounded-md">Call: +1 519-780-1144</a>
+                <a href="mailto:order@phokinhdo.com" class="pho-button w-full mt-3 py-3 rounded-full text-base">Order Pickup</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section: High Impact and Warm -->
-    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--dark-bg);">
-        <!-- Background Image of Cozy Interior -->
+    <!-- Hero Section: High Impact Pho Image -->
+    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--light-bg); color: var(--dark-text);">
+        <!-- Background Image of a steaming bowl of Pho -->
         <div class="absolute inset-0">
             <!--  -->
-            <img src="https://placehold.co/1920x1080/2E403D/E76F51?text=Cozy+Family+Dining+Interior" 
-                 alt="Cozy family dining interior with warm lighting" 
-                 class="w-full h-full object-cover opacity-50">
-            <!-- Gradient Overlay for dramatic effect -->
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-90"></div>
+            <img src="https://placehold.co/1920x1080/FFFFFF/38A169?text=Steaming+Bowl+of+Pho" 
+                 alt="Steaming Bowl of Pho with fresh herbs" 
+                 class="w-full h-full object-cover opacity-80">
+            <!-- Gradient Overlay for a subtle effect -->
+            <div class="absolute inset-0 bg-gradient-to-t from-card-bg to-transparent opacity-90"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <p class="text-primary-accent text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full" style="border-color: var(--primary-accent);">Great Food, Better Company</p>
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-white">
-                Your <span style="color: var(--primary-accent);">Family</span> Table.
+            <p style="color: var(--secondary-accent);" class="text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full border-secondary-accent">Taste of Vietnam & Thailand</p>
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-dark-text">
+                The Authentic <span style="color: var(--primary-accent);">Pho.</span>
             </h1>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 font-light">
-                Classic comfort food and drinks in Guelph's most welcoming atmosphere.
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-12 font-light">
+                Serving Guelph traditional Vietnamese noodle soups and classic Thai dishes.
             </p>
-            <a href="mailto:reservations@familybarandrestaurant.com" class="family-button inline-block py-4 px-12 rounded-full text-lg">
-                Come Join Us!
+            <a href="#menu" class="pho-button inline-block py-4 px-12 rounded-full text-lg">
+                Explore Our Menu
             </a>
         </div>
     </section>
 
-    <!-- Highlights/Menu Section (Light/Cream Background for freshness) -->
-    <section id="menu" class="py-20 sm:py-32" style="background-color: var(--card-bg); color: var(--dark-text);">
+    <!-- Menu Highlights Section -->
+    <section id="specialties" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold mb-4" style="color: var(--secondary-accent);">Comfort on a Plate</h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">From juicy burgers to hearty pasta, there's something for everyone.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">Our Signature Flavors</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Fresh ingredients, rich broths, and authentic spices make every dish memorable.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-10">
-                <!-- Highlight 1: The Grill -->
-                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-light" style="border-top: 5px solid var(--primary-accent);">
-                    <i class="ph ph-burger-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3">Classic Grill Fare</h3>
-                    <p class="text-gray-600">Perfectly cooked steaks, gourmet burgers, and fresh-cut fries—always satisfying.</p>
+                <!-- Highlight 1: Pho -->
+                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
+                    <i class="ph ph-bowl-food-duotone text-5xl mb-4 block" style="color: var(--secondary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-dark-text">The Perfect Pho</h3>
+                    <p class="text-gray-600">Slow-simmered, aromatic beef broth with fresh herbs, lime, and tender cuts of meat.</p>
                 </div>
-                <!-- Highlight 2: Family Pasta -->
-                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-light" style="border-top: 5px solid var(--primary-accent);">
-                    <i class="ph ph-spaghetti-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3">Hearty Italian</h3>
-                    <p class="text-gray-600">Mama's secret lasagna recipe, creamy fettuccine, and classic spaghetti dishes.</p>
+                <!-- Highlight 2: Pad Thai -->
+                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
+                    <i class="ph ph-noodles-duotone text-5xl mb-4 block" style="color: var(--secondary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-dark-text">Classic Pad Thai</h3>
+                    <p class="text-gray-600">Authentic Thai rice noodles stir-fried with shrimp, tofu, peanuts, and tamarind sauce.</p>
                 </div>
-                <!-- Highlight 3: The Bar -->
-                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-light" style="border-top: 5px solid var(--primary-accent);">
-                    <i class="ph ph-beer-bottle-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3">Local Brews & Drinks</h3>
-                    <p class="text-gray-600">A wide selection of local craft beers, wine, and family-friendly non-alcoholic options.</p>
+                <!-- Highlight 3: Appetizers -->
+                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
+                    <i class="ph ph-flower-lotus-duotone text-5xl mb-4 block" style="color: var(--secondary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-dark-text">Fresh & Crispy Rolls</h3>
+                    <p class="text-gray-600">Hand-rolled spring rolls and fresh salad rolls, served with our signature peanut sauce.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section (Dark Background with Accent) -->
-    <section class="py-20" style="background-color: var(--dark-bg);">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center border-2 border-primary-accent p-8 rounded-xl shadow-2xl">
-            <h3 class="text-3xl font-extrabold mb-4 text-white">Planning an Event?</h3>
-            <p class="text-gray-300 text-lg mb-8">Host your next birthday, gathering, or team dinner with us! We have space for groups large and small.</p>
-            <a href="tel:+12269796072" class="family-button inline-block py-3 px-10 rounded-full text-lg">
-                <i class="ph ph-calendar-plus text-lg mr-2"></i> Inquire About Group Bookings
+    <!-- Menu Showcase Section (Simple Layout) -->
+    <section id="menu" class="py-20 sm:py-32" style="background-color: var(--light-bg);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">A Taste of Our Full Menu</h2>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-12">Vietnamese and Thai favorites, prepared daily with love and care.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <!-- Menu Item 1: Pho -->
+                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
+                    <div class="flex justify-between items-center mb-1">
+                        <h4 class="font-bold text-xl text-dark-text">Pho Dac Biet (Special Combo)</h4>
+                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$18.95</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Beef broth with rare beef, flank, tendon, and meatballs.</p>
+                </div>
+                <!-- Menu Item 2: Thai Curry -->
+                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
+                    <div class="flex justify-between items-center mb-1">
+                        <h4 class="font-bold text-xl text-dark-text">Green Curry with Chicken</h4>
+                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$17.50</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Spicy coconut milk curry with bamboo shoots and Thai basil, served with rice.</p>
+                </div>
+                <!-- Menu Item 3: Vermicelli -->
+                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
+                    <div class="flex justify-between items-center mb-1">
+                        <h4 class="font-bold text-xl text-dark-text">Bun Thit Nuong (Grilled Pork Vermicelli)</h4>
+                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$16.95</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Cold vermicelli noodles with grilled pork, fresh vegetables, and fish sauce.</p>
+                </div>
+                <!-- Menu Item 4: Appetizer -->
+                <div class="p-6 rounded-xl shadow-md bg-card-bg transition hover:scale-[1.02] border-l-4" style="border-color: var(--primary-accent);">
+                    <div class="flex justify-between items-center mb-1">
+                        <h4 class="font-bold text-xl text-dark-text">Mango Salad</h4>
+                        <span class="font-semibold text-lg" style="color: var(--secondary-accent);">$13.00</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Tangy Thai salad with fresh mango, cashews, red onion, and house dressing.</p>
+                </div>
+            </div>
+            
+            <a href="mailto:order@phokinhdo.com" class="pho-button inline-block py-3 px-10 rounded-full text-lg mt-12">
+                Start Your Order
             </a>
         </div>
     </section>
 
     <!-- Contact and Location Section with Google Map -->
-    <section id="location" class="py-20 sm:py-32" style="background-color: var(--card-bg); color: var(--dark-text);">
+    <section id="location" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold mb-4" style="color: var(--secondary-accent);">Visit Our Family Restaurant</h2>
-                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Join us for lunch or dinner at our convenient Guelph location.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">Visit Us or Order Takeout</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">We look forward to serving you the best of Southeast Asia.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Google Maps Embed: Updated for 281 Woodlawn Rd W -->
+                <!-- Google Maps Embed: Updated for 650 Woodlawn Rd W -->
                 <div class="rounded-xl overflow-hidden shadow-2xl h-[450px] md:h-[600px] w-full border-4" style="border-color: var(--primary-accent);">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b9b7e3e2c33d5%3A0x280e81e9d12a67e4!2s281%20Woodlawn%20Rd%20W%2C%20Guelph%2C%20ON%20N1H%207K7%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b9b6e7000d6a5%3A0xc6c760e408e01103!2s650%20Woodlawn%20Rd%20W%2C%20Guelph%2C%20ON%20N1K%201B8%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
                         class="w-full h-full border-0"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Location of Family Bar and Restaurant in Guelph">
+                        title="Location of Pho Kinh Do Vietnamese Thai in Guelph">
                     </iframe>
                 </div>
                 
                 <!-- Contact Info -->
-                <div class="space-y-8 p-8 rounded-xl shadow-2xl card-light" style="border-top: 5px solid var(--secondary-accent);">
+                <div class="space-y-8 p-8 rounded-xl shadow-2xl card-style" style="border-bottom: 5px solid var(--primary-accent);">
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--primary-accent);"></i>
+                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--secondary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-dark-text">Our Address</p>
+                            <p class="font-bold text-lg text-dark-text">Our Location</p>
                             <!-- Updated Address -->
-                            <p class="text-secondary-accent">281 Woodlawn Rd W, Guelph, ON N1H 7K7, Canada</p>
+                            <p class="text-gray-600">650 Woodlawn Rd W, Guelph, ON N1K 1B8, Canada</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--primary-accent);"></i>
+                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--secondary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-dark-text">Call for Reservations</p>
+                            <p class="font-bold text-lg text-dark-text">Call Us</p>
                             <!-- Updated Phone Number -->
-                            <p class="text-secondary-accent"><a href="tel:+12269796072" class="hover:text-primary-accent transition">+1 226-979-6072</a></p>
+                            <p class="text-gray-600"><a href="tel:+15197801144" class="hover:text-primary-accent transition">+1 519-780-1144</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-clock-duotone text-3xl mt-1" style="color: var(--primary-accent);"></i>
+                        <i class="ph ph-clock-duotone text-3xl mt-1" style="color: var(--secondary-accent);"></i>
                         <div>
                             <p class="font-bold text-lg text-dark-text">Hours</p>
-                            <p class="text-secondary-accent">Mon - Thu: 11:00 AM - 9:00 PM</p>
-                            <p class="text-secondary-accent">Fri - Sun: 11:00 AM - 10:00 PM</p>
+                            <p class="text-gray-600">Mon - Sun: 11:30 AM - 9:00 PM</p>
                         </div>
                     </div>
                     <!-- Dedicated Call Button for Mobile/Touch -->
-                    <a href="tel:+12269796072" class="family-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
-                        <i class="ph ph-phone-call text-lg mr-2"></i> Call Now (+1 226-979-6072)
+                    <a href="tel:+15197801144" class="pho-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
+                        <i class="ph ph-phone-call text-lg mr-2"></i> Call to Order (+1 519-780-1144)
                     </a>
                 </div>
 
@@ -218,19 +245,18 @@
         </div>
     </section>
 
-    <!-- Footer (Dark for coziness) -->
-    <footer class="dark-section text-gray-400 py-8 border-t border-primary-accent">
+    <!-- Footer -->
+    <footer class="bg-dark-text text-gray-400 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl font-bold mb-2">Family <span style="color: var(--primary-accent);">Bar & Grill</span></p>
-            <p class="text-sm">Guelph's cozy spot for great food and good times.</p>
+            <p class="text-xl font-bold mb-2">Pho <span style="color: var(--primary-accent);">Kinh Do</span></p>
+            <p class="text-sm">Authentic Vietnamese & Thai Cuisine in Guelph, ON.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
                 <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
             </div>
-            <p class="text-xs mt-6 text-gray-500">&copy; 2024 Family Bar and Restaurant. All rights reserved.</p>
+            <p class="text-xs mt-6 text-gray-500">&copy; 2024 Pho Kinh Do Vietnamese Thai. All rights reserved.</p>
         </div>
     </footer>
 
 </body>
 </html>
-
