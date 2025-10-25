@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puffle Cafe - Your Cozy Dessert Spot</title>
+    <title>Family Bar and Restaurant - Cozy Dining in Guelph</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Google Font: Inter (Modern and Clean) -->
@@ -11,46 +11,46 @@
     <!-- Load Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        /* Custom Colors for a Soft, Cozy Cafe Theme (Cream, Soft Gray, Turquoise) */
+        /* Custom Colors for a Warm, Family-Friendly Theme (Forest Green, Cream, Terracotta) */
         :root {
-            --light-bg: #F9F7F3; /* Creamy off-white background */
-            --card-bg: #FFFFFF; /* Pure white for cards */
-            --primary-accent: #48C9B0; /* Turquoise (Turqueza) */
-            --secondary-accent: #6C7A89; /* Soft Gray/Slate */
-            --dark-text: #2C3E50; /* Deep blue/gray for readability */
+            --dark-bg: #2E403D; /* Deep Forest Green */
+            --card-bg: #F5F5DC; /* Creamy Beige */
+            --primary-accent: #E76F51; /* Soft Terracotta/Orange */
+            --secondary-accent: #1D2625; /* Very Dark Green/Charcoal */
+            --light-text: #F0F0F0; /* Creamy White */
+            --dark-text: #1D2625; /* Dark text on light elements */
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--dark-text);
+            background-color: var(--dark-bg);
+            color: var(--light-text);
         }
-        /* Custom Button Style with Turquoise Accent */
-        .puffle-button {
+        /* Custom Button Style with Warm Accent and Shadow */
+        .family-button {
             background-color: var(--primary-accent);
-            color: var(--dark-text);
+            color: white;
             font-weight: 700;
             transition: all 0.3s ease-in-out;
-            /* Updated shadow to use Turquoise RGB (72, 201, 176) */
-            box-shadow: 0 4px 15px rgba(72, 201, 176, 0.4);
+            box-shadow: 0 4px 15px rgba(231, 111, 81, 0.4);
         }
-        .puffle-button:hover {
-            background-color: #6FE6D0; /* Lighter shade on hover (approximate for #48C9B0) */
-            /* Updated shadow to use Turquoise RGB (72, 201, 176) */
-            box-shadow: 0 8px 25px rgba(72, 201, 176, 0.6);
+        .family-button:hover {
+            background-color: #FA856B; /* Lighter shade on hover */
+            box-shadow: 0 8px 25px rgba(231, 111, 81, 0.6);
             transform: scale(1.03);
         }
 
-        /* Subtle rounded cards with soft shadow */
-        .card-style {
+        /* Card style on light background, with a warm border */
+        .card-light {
             background-color: var(--card-bg);
-            /* Updated border color to Turquoise */
-            border-top: 5px solid var(--primary-accent);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            color: var(--dark-text);
+            border-bottom: 5px solid var(--primary-accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Logo text style */
-        .logo-text {
-            color: var(--primary-accent);
+        /* Dark section style (used in header and footer) */
+        .dark-section {
+            background-color: var(--secondary-accent);
+            color: var(--light-text);
         }
 
         /* Smooth Scroll for Nav Links */
@@ -61,192 +61,156 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation (Light background) -->
-    <header class="bg-card-bg sticky top-0 z-20 border-b border-gray-100 shadow-sm">
+    <!-- Header & Navigation (Dark for cozy atmosphere) -->
+    <header class="dark-section sticky top-0 z-20 border-b border-primary-accent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-extrabold tracking-wider" style="color: var(--dark-text);">
-                PUFFLE <span class="logo-text">CAFÉ</span>
+            <a href="#home" class="text-3xl font-extrabold tracking-wider text-white">
+                FAMILY <span style="color: var(--primary-accent);">BAR & GRILL</span>
             </a>
             <nav class="hidden md:flex space-x-10 text-sm font-medium items-center">
-                <a href="#menu" class="text-secondary-accent hover:logo-text transition duration-150">Menu</a>
-                <a href="#specialties" class="text-secondary-accent hover:logo-text transition duration-150">Specialties</a>
-                <a href="#location" class="text-secondary-accent hover:logo-text transition duration-150">Find Us</a>
+                <a href="#menu" class="text-gray-300 hover:text-primary-accent transition duration-150">Menu</a>
+                <a href="#gallery" class="text-gray-300 hover:text-primary-accent transition duration-150">Gallery</a>
+                <a href="#location" class="text-gray-300 hover:text-primary-accent transition duration-150">Location</a>
                 <!-- Call Button -->
-                <a href="tel:+15192652200" class="text-primary-accent border border-primary-accent px-3 py-2 rounded-full hover:bg-gray-100 transition duration-150 flex items-center space-x-2">
+                <a href="tel:+12269796072" class="text-primary-accent border border-primary-accent px-3 py-2 rounded-full hover:bg-dark-bg transition duration-150 flex items-center space-x-2">
                     <i class="ph ph-phone text-lg"></i>
-                    <span>Call Ahead</span>
+                    <span>Call to Reserve</span>
                 </a>
-                <a href="mailto:hello@pufflecafe.com" class="puffle-button px-5 py-2 rounded-full text-sm">Order Online</a>
+                <a href="mailto:reservations@familybarandrestaurant.com" class="family-button px-5 py-2 rounded-full text-sm">Book a Table</a>
             </nav>
-            <button class="md:hidden text-dark-text focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="ph ph-list text-3xl"></i>
             </button>
         </div>
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-gray-200 absolute w-full shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden dark-section border-t border-gray-700 absolute w-full shadow-lg">
             <div class="px-5 pt-3 pb-4 space-y-2 flex flex-col items-center">
-                <a href="#menu" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:logo-text hover:bg-gray-50 rounded-md">Menu</a>
-                <a href="#specialties" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:logo-text hover:bg-gray-50 rounded-md">Specialties</a>
-                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-secondary-accent hover:logo-text hover:bg-gray-50 rounded-md">Find Us</a>
-                <a href="tel:+15192652200" class="block w-full text-center py-2 text-base font-medium text-primary-accent border border-primary-accent hover:bg-gray-50 rounded-md">Call: +1 519-265-2200</a>
-                <a href="mailto:hello@pufflecafe.com" class="puffle-button w-full mt-3 py-3 rounded-full text-base">Order Online</a>
+                <a href="#menu" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Menu</a>
+                <a href="#gallery" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Gallery</a>
+                <a href="#location" class="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-accent hover:bg-dark-bg rounded-md">Location</a>
+                <a href="tel:+12269796072" class="block w-full text-center py-2 text-base font-medium text-primary-accent border border-primary-accent hover:bg-dark-bg rounded-md">Call: +1 226-979-6072</a>
+                <a href="mailto:reservations@familybarandrestaurant.com" class="family-button w-full mt-3 py-3 rounded-full text-base">Book a Table</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section: Soft and Welcoming -->
-    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--light-bg); color: var(--dark-text);">
-        <!-- Background Image of Puffles or Cozy Cafe Scene -->
+    <!-- Hero Section: High Impact and Warm -->
+    <section id="home" class="relative overflow-hidden pt-32 pb-40 lg:pt-48 lg:pb-64" style="background-color: var(--dark-bg);">
+        <!-- Background Image of Cozy Interior -->
         <div class="absolute inset-0">
             <!--  -->
-            <img src="https://placehold.co/1920x1080/F9F7F3/48C9B0?text=Delicious+Puffle+Waffle+Desserts" 
-                 alt="Delicious Puffle Waffle Desserts" 
-                 class="w-full h-full object-cover opacity-60">
-            <!-- Gradient Overlay for soft effect -->
-            <div class="absolute inset-0 bg-gradient-to-t from-light-bg to-transparent opacity-90"></div>
+            <img src="https://placehold.co/1920x1080/2E403D/E76F51?text=Cozy+Family+Dining+Interior" 
+                 alt="Cozy family dining interior with warm lighting" 
+                 class="w-full h-full object-cover opacity-50">
+            <!-- Gradient Overlay for dramatic effect -->
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-90"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <p class="logo-text text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full" style="border-color: var(--primary-accent);">Freshly Made Daily</p>
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-dark-text">
-                Guelph's <span class="logo-text">Sweet Spot.</span>
+            <p class="text-primary-accent text-sm font-semibold uppercase tracking-widest mb-4 border inline-block px-3 py-1 rounded-full" style="border-color: var(--primary-accent);">Great Food, Better Company</p>
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-white">
+                Your <span style="color: var(--primary-accent);">Family</span> Table.
             </h1>
-            <p class="text-xl text-secondary-accent max-w-3xl mx-auto mb-12 font-light">
-                Serving the fluffiest bubble waffles, gourmet coffee, and cozy vibes.
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 font-light">
+                Classic comfort food and drinks in Guelph's most welcoming atmosphere.
             </p>
-            <a href="mailto:hello@pufflecafe.com" class="puffle-button inline-block py-4 px-12 rounded-full text-lg">
-                View Menu & Order
+            <a href="mailto:reservations@familybarandrestaurant.com" class="family-button inline-block py-4 px-12 rounded-full text-lg">
+                Come Join Us!
             </a>
         </div>
     </section>
 
-    <!-- Specialties/Products Section -->
-    <section id="specialties" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
+    <!-- Highlights/Menu Section (Light/Cream Background for freshness) -->
+    <section id="menu" class="py-20 sm:py-32" style="background-color: var(--card-bg); color: var(--dark-text);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">Our Sweet Specialties</h2>
-                <p class="text-secondary-accent text-lg max-w-2xl mx-auto">Explore our signature Puffle Creations and refreshing drinks.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-4" style="color: var(--secondary-accent);">Comfort on a Plate</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">From juicy burgers to hearty pasta, there's something for everyone.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-10">
-                <!-- Highlight 1: Signature Puffle -->
-                <div class="p-8 rounded-xl shadow-md transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
-                    <i class="ph ph-heart-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-dark-text">The Classic Puffle</h3>
-                    <p class="text-secondary-accent">A warm bubble waffle served with vanilla ice cream, fresh berries, and a dusting of icing sugar.</p>
+                <!-- Highlight 1: The Grill -->
+                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-light" style="border-top: 5px solid var(--primary-accent);">
+                    <i class="ph ph-burger-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3">Classic Grill Fare</h3>
+                    <p class="text-gray-600">Perfectly cooked steaks, gourmet burgers, and fresh-cut fries—always satisfying.</p>
                 </div>
-                <!-- Highlight 2: Gourmet Coffee -->
-                <div class="p-8 rounded-xl shadow-md transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
-                    <i class="ph ph-coffee-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-dark-text">Gourmet Espresso</h3>
-                    <p class="text-secondary-accent">Perfectly brewed espresso drinks, lattes, and cappuccinos using local roast beans.</p>
+                <!-- Highlight 2: Family Pasta -->
+                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-light" style="border-top: 5px solid var(--primary-accent);">
+                    <i class="ph ph-spaghetti-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3">Hearty Italian</h3>
+                    <p class="text-gray-600">Mama's secret lasagna recipe, creamy fettuccine, and classic spaghetti dishes.</p>
                 </div>
-                <!-- Highlight 3: Bubble Tea/Drinks -->
-                <div class="p-8 rounded-xl shadow-md transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-style">
-                    <i class="ph ph-bubble-tea-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
-                    <h3 class="text-2xl font-bold mb-3 text-dark-text">Iced & Refreshing</h3>
-                    <p class="text-secondary-accent">Cool off with our selection of freshly brewed iced teas, fruit smoothies, and specialty bubble teas.</p>
+                <!-- Highlight 3: The Bar -->
+                <div class="p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-xl card-light" style="border-top: 5px solid var(--primary-accent);">
+                    <i class="ph ph-beer-bottle-duotone text-5xl mb-4 block" style="color: var(--primary-accent);"></i>
+                    <h3 class="text-2xl font-bold mb-3">Local Brews & Drinks</h3>
+                    <p class="text-gray-600">A wide selection of local craft beers, wine, and family-friendly non-alcoholic options.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu/Gallery Section (Simulated Menu) -->
-    <section id="menu" class="py-20 sm:py-32" style="background-color: var(--light-bg);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">The Puffle Menu</h2>
-            <p class="text-secondary-accent text-lg max-w-3xl mx-auto mb-12">Sweet treats and drinks to brighten your day.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <!-- Menu Item 1 -->
-                <div class="p-6 rounded-xl shadow-inner card-style transition hover:scale-[1.02]">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Mango Tango Puffle</h4>
-                        <span class="font-semibold text-lg logo-text">$12.95</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Mango ice cream, fresh mango chunks, condensed milk drizzle.</p>
-                </div>
-                <!-- Menu Item 2 -->
-                <div class="p-6 rounded-xl shadow-inner card-style transition hover:scale-[1.02]">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Chocolate Dream Puffle</h4>
-                        <span class="font-semibold text-lg logo-text">$11.50</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Chocolate ice cream, Oreos, chocolate chips, and whipped cream.</p>
-                </div>
-                <!-- Menu Item 3 -->
-                <div class="p-6 rounded-xl shadow-inner card-style transition hover:scale-[1.02]">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Matcha Bliss Latte</h4>
-                        <span class="font-semibold text-lg logo-text">$5.75</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Ceremonial grade matcha with oat milk, served hot or iced.</p>
-                </div>
-                <!-- Menu Item 4 -->
-                <div class="p-6 rounded-xl shadow-inner card-style transition hover:scale-[1.02]">
-                    <div class="flex justify-between items-center mb-1">
-                        <h4 class="font-bold text-xl text-dark-text">Classic Taro Bubble Tea</h4>
-                        <span class="font-semibold text-lg logo-text">$6.50</span>
-                    </div>
-                    <p class="text-gray-500 text-sm">Sweet, creamy taro milk tea with chewy tapioca pearls.</p>
-                </div>
-            </div>
-            
-            <a href="mailto:hello@pufflecafe.com" class="puffle-button inline-block py-3 px-10 rounded-full text-lg mt-12">
-                See Full Menu (PDF)
+    <!-- CTA Section (Dark Background with Accent) -->
+    <section class="py-20" style="background-color: var(--dark-bg);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center border-2 border-primary-accent p-8 rounded-xl shadow-2xl">
+            <h3 class="text-3xl font-extrabold mb-4 text-white">Planning an Event?</h3>
+            <p class="text-gray-300 text-lg mb-8">Host your next birthday, gathering, or team dinner with us! We have space for groups large and small.</p>
+            <a href="tel:+12269796072" class="family-button inline-block py-3 px-10 rounded-full text-lg">
+                <i class="ph ph-calendar-plus text-lg mr-2"></i> Inquire About Group Bookings
             </a>
         </div>
     </section>
 
     <!-- Contact and Location Section with Google Map -->
-    <section id="location" class="py-20 sm:py-32" style="background-color: var(--card-bg);">
+    <section id="location" class="py-20 sm:py-32" style="background-color: var(--card-bg); color: var(--dark-text);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-dark-text mb-4">Visit Our Cozy Corner</h2>
-                <p class="text-secondary-accent text-lg max-w-3xl mx-auto">Find us conveniently located near Silvercreek Parkway.</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-4" style="color: var(--secondary-accent);">Visit Our Family Restaurant</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Join us for lunch or dinner at our convenient Guelph location.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Google Maps Embed: Updated for 219 Silvercreek Pkwy N #7 -->
+                <!-- Google Maps Embed: Updated for 281 Woodlawn Rd W -->
                 <div class="rounded-xl overflow-hidden shadow-2xl h-[450px] md:h-[600px] w-full border-4" style="border-color: var(--primary-accent);">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b8f84713a0e69%3A0x803e6d8a3e7e8913!2s219%20Silvercreek%20Pkwy%20N%20%237%2C%20Guelph%2C%20ON%20N1H%207K4%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.288289569731!2d-80.2646249!3d43.5939766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b9b7e3e2c33d5%3A0x280e81e9d12a67e4!2s281%20Woodlawn%20Rd%20W%2C%20Guelph%2C%20ON%20N1H%207K7%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
                         class="w-full h-full border-0"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Location of Puffle Café in Guelph">
+                        title="Location of Family Bar and Restaurant in Guelph">
                     </iframe>
                 </div>
                 
-                <!-- Contact Info (White Card) -->
-                <div class="space-y-8 p-8 rounded-xl shadow-2xl card-style">
+                <!-- Contact Info -->
+                <div class="space-y-8 p-8 rounded-xl shadow-2xl card-light" style="border-top: 5px solid var(--secondary-accent);">
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-map-pin text-3xl mt-1 logo-text"></i>
+                        <i class="ph ph-map-pin text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-dark-text">Our Location</p>
+                            <p class="font-bold text-lg text-dark-text">Our Address</p>
                             <!-- Updated Address -->
-                            <p class="text-secondary-accent">219 Silvercreek Pkwy N #7, Guelph, ON N1H 7K4, Canada</p>
+                            <p class="text-secondary-accent">281 Woodlawn Rd W, Guelph, ON N1H 7K7, Canada</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-phone-call text-3xl mt-1 logo-text"></i>
+                        <i class="ph ph-phone-call text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
-                            <p class="font-bold text-lg text-dark-text">Call Ahead</p>
+                            <p class="font-bold text-lg text-dark-text">Call for Reservations</p>
                             <!-- Updated Phone Number -->
-                            <p class="text-secondary-accent"><a href="tel:+15192652200" class="hover:logo-text transition">+1 519-265-2200</a></p>
+                            <p class="text-secondary-accent"><a href="tel:+12269796072" class="hover:text-primary-accent transition">+1 226-979-6072</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <i class="ph ph-clock-duotone text-3xl mt-1 logo-text"></i>
+                        <i class="ph ph-clock-duotone text-3xl mt-1" style="color: var(--primary-accent);"></i>
                         <div>
                             <p class="font-bold text-lg text-dark-text">Hours</p>
-                            <p class="text-secondary-accent">Mon - Thu: 10:00 AM - 8:00 PM</p>
-                            <p class="text-secondary-accent">Fri - Sun: 10:00 AM - 9:00 PM</p>
+                            <p class="text-secondary-accent">Mon - Thu: 11:00 AM - 9:00 PM</p>
+                            <p class="text-secondary-accent">Fri - Sun: 11:00 AM - 10:00 PM</p>
                         </div>
                     </div>
                     <!-- Dedicated Call Button for Mobile/Touch -->
-                    <a href="tel:+15192652200" class="puffle-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
-                        <i class="ph ph-phone-call text-lg mr-2"></i> Call Puffle Café (+1 519-265-2200)
+                    <a href="tel:+12269796072" class="family-button inline-block w-full text-center py-3 rounded-full text-md mt-6">
+                        <i class="ph ph-phone-call text-lg mr-2"></i> Call Now (+1 226-979-6072)
                     </a>
                 </div>
 
@@ -254,18 +218,19 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark-text text-gray-300 py-8">
+    <!-- Footer (Dark for coziness) -->
+    <footer class="dark-section text-gray-400 py-8 border-t border-primary-accent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl font-bold mb-2">Puffle <span class="logo-text">Café</span></p>
-            <p class="text-sm">Your cozy spot for sweet treats and coffee in Guelph, ON.</p>
+            <p class="text-xl font-bold mb-2">Family <span style="color: var(--primary-accent);">Bar & Grill</span></p>
+            <p class="text-sm">Guelph's cozy spot for great food and good times.</p>
             <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="text-gray-500 hover:logo-text transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
-                <a href="#" class="text-gray-500 hover:logo-text transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-primary-accent transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
             </div>
-            <p class="text-xs mt-6 text-gray-500">&copy; 2024 Puffle Café. All rights reserved.</p>
+            <p class="text-xs mt-6 text-gray-500">&copy; 2024 Family Bar and Restaurant. All rights reserved.</p>
         </div>
     </footer>
 
 </body>
 </html>
+
